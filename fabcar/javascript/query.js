@@ -43,7 +43,9 @@ async function main() {
         // Evaluate the specified transaction.
         // queryCar transaction - requires 1 argument, ex: ('queryCar', 'CAR4')
         // queryAllCars transaction - requires no arguments, ex: ('queryAllCars')
-        const result = await contract.evaluateTransaction('queryAllCars');
+        //const result = await contract.evaluateTransaction("readData","key1");
+        const result = await contract.evaluateTransaction("queryEvent","E1");
+
         console.log(`Transaction has been evaluated, result is: ${result.toString()}`);
 
         // Disconnect from the gateway.
@@ -56,3 +58,4 @@ async function main() {
 }
 
 main();
+

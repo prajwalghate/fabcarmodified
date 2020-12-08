@@ -42,8 +42,11 @@ async function main() {
         // Submit the specified transaction.
         // createCar transaction - requires 5 argument, ex: ('createCar', 'CAR12', 'Honda', 'Accord', 'Black', 'Tom')
         // changeCarOwner transaction - requires 2 args , ex: ('changeCarOwner', 'CAR12', 'Dave')
-        await contract.submitTransaction('createCar', 'CAR12', 'Honda', 'Accord', 'Black', 'Tom');
+        //await contract.submitTransaction("writeData","key1","learning hyperledger");
+        await contract.submitTransaction("donateMoney",34245456,"demoUser","email@gmail.com");
+
         console.log('Transaction has been submitted');
+
 
         // Disconnect from the gateway.
         await gateway.disconnect();
@@ -55,3 +58,4 @@ async function main() {
 }
 
 main();
+
